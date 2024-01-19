@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+   <link rel="stylesheet" href="style.css">
+    <title>GitHub Repositories List</title>
+  </head>
+ 
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              id="usernameInput"
+              class="form-control"
+              placeholder="Enter GitHub username"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-primary"
+                type="button"
+                onclick="searchUser()"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+          <div class="input-group repos-per-page-select">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="reposPerPageSelect"
+                >Repo/Page:</label
+              >
+            </div>
+            <select
+              class="custom-select"
+              id="reposPerPageSelect"
+              onchange="updateReposPerPage()"
+            >
+              <option value="10" selected>10</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <input
+  type="text"
+  id="repoSearchInput"
+  class="form-control"
+  placeholder="Search repositories"
+  oninput="filterRepos()"
+/>
+
+            <div class="input-group-append">
+              <button
+                class="btn btn-primary"
+                type="button"
+                onclick="clearSearch()"
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+
+          <div id="userInfo" class="text-center"></div>
+        </div>
+      </div>
+
+      <ul id="repoList" class="mt-4"></ul>
+
+      <div id="pagination" class="text-center mt-4">
+        <div class="pagination-buttons"></div>
+      </div>
+    </div>
+
+   <script src="script.js"></script>
+  </body>
+</html>

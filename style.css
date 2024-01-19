@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+.user-info-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.avatar {
+  width: 400px;
+  border-radius: 50%;
+}
+
+.user-details {
+  margin-left: 10px; 
+}
+
+.repos-per-page-select {
+  margin-bottom: 10px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#userInfo {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+#repoList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.repo-details {
+  flex: 0 0 calc(50% - 20px);
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #141313;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.repo-details:hover {
+  transform: scale(1.05);
+}
+
+h2,
+h4 {
+  margin-bottom: 10px;
+}
+
+.tech-used {
+  color: #666;
+}
+
+.tech-box {
+  background-color: #469cd6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-buttons button {
+  margin: 0 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.pagination-buttons button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.repo-details a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
